@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Customers</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+<header class="fixed-top bg-success">
+    <div class="d-flex align-items-center">
+<nav id="navbar" class="navbar navbar-default ">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a  class="navbar-brand me-3" href="" class="link-light">Geena Captures Photography</a>
+        </div>
+
+        <a class="nav-link scrollto me-3 link-light" href="{% url 'index' %}">HOME</a>
+        <a class="nav-link scrollto me-3 link-light" href="{% url 'about' %}">ABOUT US</a>
+        <a class="nav-link scrollto me-3 link-light" href="{% url 'contacts' %}">CONTACT US</a>
+        <a class="nav-link scrollto me-3 link-light" href="{% url 'gallery' %}">GALLERY</a>
+        <a class="nav-link scrollto me-3 link-light" href="{% url 'appointments' %}">MAKE APPOINTMENT</a>
+        <a class="nav-link scrollto me-3 link-light" href="{% url 'services' %}">OUR SERVICES</a>
+
+
+    </div>
+
+</nav>
+        </div>
+</header>
+
+<section>
+<h1 class="text-center text-bg-success mt-5">Customers with Appointment</h1>
+<table class="table table-info">
+    <thead class="table-dark">
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Address</th>
+        <th>Phone Number</th>
+        <th>Email Address</th>
+        <th>Service Needed</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    {% for customer in customers %}
+    <tr>
+        <td>{{ customer.firstname }}</td>
+        <td>{{ customer.lastname }}</td>
+        <td>{{ customer.address }}</td>
+        <td>{{ customer.phonenumber }}</td>
+        <td>{{ customer.email }}</td>
+        <td>{{ customer.service}}</td>
+
+        <td>
+            <a href="/edit/{{ customer.id }}" class="btn btn-warning">EDIT</a>
+            <a href="/delete/{{ customer.id }}" class="btn btn-danger">DELETE</a>
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</section>
+
+</body>
+</html>

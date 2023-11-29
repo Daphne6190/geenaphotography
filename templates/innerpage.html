@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <scsript src="{% static 'js/bootstrap.min.js' %}"></scsript>
+</head>
+<body>
+<header class="fixed-top bg-info">
+    <div class="d-flex align-items-center">
+<nav id="navbar" class="navbar navbar-default ">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a  class="navbar-brand me-3" href="">Geena Captures Photography</a>
+        </div>
+
+        <a class="nav-link scrollto me-3" href="{% url 'index' %}">HOME</a>
+        <a class="nav-link scrollto me-3 " href="{% url 'about' %}">ABOUT US</a>
+        <a class="nav-link scrollto me-3" href="{% url 'contacts' %}">CONTACT US</a>
+        <a class="nav-link scrollto me-3" href="{% url 'gallery' %}">GALLERY</a>
+        <a class="nav-link scrollto me-3" href="{% url 'appointments' %}">MAKE APPOINTMENT</a>
+        <a class="nav-link scrollto me-3" href="{% url 'services' %}">OUR SERVICES</a>
+
+
+    </div>
+
+</nav>
+        </div>
+</header>
+
+<!----Section--->
+<section>
+
+
+</section>
+<!----End Section---->
+
+<!----footer section---->
+<footer>
+    <div class=" bg-secondary">
+        <div class="container">
+            <div class="row ">
+        <div class="col col-lg-4">
+
+            <p class="text-light">Here at Geena Captures we prioritize your satisfaction. We are dedicated to making sure your memories stay with you forever.</p>
+        </div>
+              
+                <div class="col col-lg-4">
+                    <h4 class="text-light">Quick Links</h4>
+                    <ul>
+                        <li><a href="{% url 'appointments' %}">Make Appointment</a></li>
+                        <li><a href="{% url 'index' %}">Home</a></li>
+                        <li><a href="{% url 'services' %}">Services</a></li>
+                        <li><a href="{% url 'about' %}">About Us</a></li>
+                        <li><a href=" ">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="col col-lg-4">
+                    <h4 class="text-light">Contact Us</h4>
+                    <p class="text-light">
+                        E-Mail: geenacaptures@gmail.com <br>
+                        Telephone: 0711098666 <br>
+                        Visit Us: ABC Place near James Gichuru Road
+                    </p>
+                </div>
+
+                <div class="row">
+                    <p class="text-center text-bg-dark">GeenaCaptures-Copyright ; 2023</p>
+                </div>
+
+    </div>
+        </div>
+
+    </div>
+</footer>
+<!----End Footer Section---->
+</body>
+</html>

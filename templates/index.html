@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home Page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+
+<body>
+<header class="fixed-top bg-success">
+    <div class="d-flex align-items-center">
+<nav id="navbar" class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a  class="navbar-brand me-3 link-light" href="">Geena Captures Photography</a>
+        </div>
+
+        <a class="nav-link scrollto me-3 link-light" href="{% url 'index' %}">HOME</a>
+        <a class="nav-link scrollto me-3 link-light" href="{% url 'about' %}">ABOUT US</a>
+        <a class="nav-link scrollto me-3 link-light" href="{% url 'contacts' %}">CONTACT US</a>
+        <a class="nav-link scrollto me-3 link-light" href="{% url 'gallery' %}">GALLERY</a>
+        <a class="nav-link scrollto me-3 link-light" href="{% url 'appointments' %}">MAKE APPOINTMENT</a>
+        <a class="nav-link scrollto me-3 link-light" href="{% url 'customers' %}">EDIT CUSTOMER</a>
+
+
+    </div>
+
+</nav>
+        </div>
+</header>
+
+<!----Section--->
+<section>
+    <div class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-inner">
+            <div class="carousel-item active bg-image" style="background-image: url({% static 'images/graduatinggroup.png' %}); height:100vh;">
+                <div class="container">
+                    <h2>Welcome to <span>Geena Captures Photography</span></h2>
+                    <p>We are a company that values your memories. We are dedicated to making sure that they stay with you forever.</p>
+
+                    </div>
+            </div>
+
+            <div class="carousel-item bg-image" style="background-image: url({% static 'images/brideandgroom.png' %});height: 100vh;">
+                <div class="container">
+                    <h2>We are Present Every Step of the Way</h2>
+                    <p>We take pride in making sure your memories are a part of your life. It is our pleasure to be a part of your journey</p>
+                </div>
+            </div>
+
+            <div class="carousel-item bg-image" style="background-image: url({% static 'images/maternitykola.png' %}); height: 100vh;">
+                <div class="container">
+
+                    </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section>
+     <div class="row">
+         <h1 class="mt-5">TESTIMONIALS</h1>
+         <div class="col col-lg-4">
+             <div class="card shadow bg-white mb-5">
+                 <div class="card-body">
+                     <h3 class="card-header bg-success">Tonio Nami</h3>
+                     <p class="card-body"><quote>One of the best photograhy companies I know. None can compare to the amount of work they do. I respect their professionalism.</quote></p>
+                 </div>
+             </div>
+         </div>
+
+         <div class="col col-lg-4">
+             <div class="card bg-transparent shadow-lg mb-5">
+                 <div class="card-body">
+                     <h3 class="card-header bg-success">Naomi Hampton</h3>
+                     <p class="card-body">None compares to them. Their professionality is on a different level. they truly understand their job and most of all their clients.</p>
+                 </div>
+             </div>
+         </div>
+
+         <div class="col col-lg-4">
+             <div class="card bg-white shadow-lg mb-5">
+                 <div class="card-body">
+                     <h3 class="card-header bg-success">Timon Privi</h3>
+                     <p class="card-body">I once had them at an event and they did an amazing job. They did not just understand the instructions but also delivered a perfect product. </p>
+                 </div>
+             </div>
+         </div>
+     </div>
+</section>
+
+<section>
+    <div class="row">
+        <h1 class="mt-5">FREQUENTLY ASKED QUESTIONS</h1>
+        <div class="col col-lg-6">
+            <div class="card shadow-lg mb-5 bg-white rounded">
+                <div class="card-body">
+                    <h3 class="card-header">Questions About Our Photography Services</h3>
+                    <p class="card-body">How Often are you available <br>
+                        Do you offer wedding shoots? <br>
+                        Are you limited to one type of service? <br>
+                        I would like a photographer for a funeral. Do you offer such services?
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col col-lg-6">
+            <div class="card shadow-lg mb-5 bg-white rounded">
+                <div class="card-body">
+                    <h3 class="card-header">Questions About Videography</h3>
+                    <p class="card-body">Do you guys do wedding videos? <br>
+                        How about birthday videos? <br>
+                        I have a party coming up.Can i book you guys? <br>
+                        How much does it cost for a video?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<!----End Section---->
+
+<footer>
+    <div class=" bg-success">
+            <div class="row ">
+        <div class="col col-lg-4">
+            <p class="text-light">Here at Geena Captures we prioritize your satisfaction. We are dedicated to making sure your memories stay with you forever.</p>
+        </div>
+
+                <div class="col col-lg-4">
+                    <h5 class="text-light">Quick Links</h5>
+
+                        <a href="{% url 'appointments' %}" class="link-light">Make Appointment</a> <br>
+
+                        <a href="{% url 'gallery' %}" class="link-light">Gallery</a> <br>
+
+                        <a href="{% url 'index' %} " class="link-light">Home</a> <br>
+                        <a href="{% url 'about' %} " class="link-light">About Us</a> <br>
+
+                </div>
+
+                <div class="col col-lg-4">
+                    <h5 class="text-light">Contact Us</h5>
+                    <p class="text-light">
+                        E-Mail: geenacaptures@gmail.com <br>
+                        Telephone: 0711098666 <br>
+                        Visit Us: ABC Place Nairobi near James Gichuru road
+                    </p>
+                </div>
+                <div class="row">
+                    <p class="text-center text-bg-dark">GeenaCaptures-Copyright ; 2023</p>
+                </div>
+
+            </div>
+    </div>
+</footer>
+</body>
+</html>

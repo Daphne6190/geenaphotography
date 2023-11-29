@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About Us</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+
+<header class="fixed-top bg-success">
+    <div class="d-flex align-items-center">
+<nav id="navbar" class="navbar navbar-default ">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a  class="navbar-brand me-3" href="">Geena Captures Photography</a>
+        </div>
+
+        <a class="nav-link scrollto me-3 link-light" href="{% url 'index' %}">HOME</a>
+        <a class="nav-link scrollto me-3 link-light" href="{% url 'about' %}">ABOUT US</a>
+        <a class="nav-link scrollto me-3 link-light" href="{% url 'contacts' %}">CONTACT US</a>
+        <a class="nav-link scrollto me-3 link-light" href="{% url 'gallery' %}">GALLERY</a>
+        <a class="nav-link scrollto me-3 link-light" href="{% url 'appointments' %}">MAKE APPOINTMENT</a>
+        <a class="nav-link scrollto me-3 link-light" href="{% url 'customers' %}">EDIT CUSTOMER</a>
+
+
+    </div>
+
+</nav>
+        </div>
+</header>
+
+<!----Section--->
+<section class="bg-white">
+<div class="row">
+    <div class="col col-6">
+    <h4 class="mt-5 text-bg-secondary">About <span>Geena Captures Photography</span></h4>
+        <h6>Fun Fact</h6>
+        <p>Our company was started out of a yearning for adventure</p> <br>
+
+        <h3>Helping memories transcend through the power of the camera</h3>
+        <p>We are a company that provides photography and videography services. We are very passionate about what we do. Bringing smiles to our clients' faces is our joy
+        . Our mantra is quality service for all. Your memories do not have to be forgotten if you don't want to forget. Give us a call and we will make them permanent.</p>
+    </div>
+
+    <div class="col col-lg-6">
+        <img src="{% static 'images/weddingdecor.png' %}" class="rounded-3 mt-5" alt="">
+    </div>
+</div>
+
+</section>
+
+<section class="bg-dark-subtle">
+    <div class="row">
+        <h1>Our Services</h1>
+        <div class="col col-lg-6">
+            <h3>Photography</h3>
+            <p>We offer different types of photography:
+                <ul>
+            <li>Wedding Photography</li>
+            <li>Funeral</li>
+            <li>Maternity Shoot</li>
+            <li>Birthday Photos</li>
+            <li>Graduations</li>
+        </ul>
+            </p>
+        </div>
+
+        <div class="col col-lg-6">
+            <h3>Videography</h3>
+            <p>Call us for the following:
+                <ul>
+            <li>Wedding Videography</li>
+            <li>Funeral</li>
+            <li>Birthday</li>
+            <li>Filmmaking</li>
+            <li>Graduation</li>
+        </ul>
+            </p>
+        </div>
+    </div>
+
+    <div class="row">
+        <h2>Other Services</h2>
+        <p>Video & Photo Editing and Photo Framing <br>
+        Camera Hiring</p>
+    </div>
+</section>
+<!----End Section---->
+
+<footer>
+    <div class=" bg-success">
+            <div class="row ">
+        <div class="col col-lg-4">
+            <p class="text-light">Here at Geena Captures we prioritize your satisfaction. We are dedicated to making sure your memories stay with you forever.</p>
+        </div>
+
+                <div class="col col-lg-4">
+                    <h5 class="text-light">Quick Links</h5>
+
+                        <a href="{% url 'appointments' %}" class="link-light">Make Appointment</a> <br>
+
+                        <a href="{% url 'gallery' %}" class="link-light">Gallery</a> <br>
+
+                        <a href="{% url 'index' %} " class="link-light">Home</a> <br>
+                        <a href="{% url 'about' %} " class="link-light">About Us</a> <br>
+
+                </div>
+
+                <div class="col col-lg-4">
+                    <h5 class="text-light">Contact Us</h5>
+                    <p class="text-light">
+                        E-Mail: geenacaptures@gmail.com <br>
+                        Telephone: 0711098666 <br>
+                        Visit Us: ABC Place Nairobi near James Gichuru road
+                    </p>
+                </div>
+                <div class="row">
+                    <p class="text-center text-bg-dark">GeenaCaptures-Copyright ; 2023</p>
+                </div>
+
+            </div>
+    </div>
+</footer>
+</body>
+</html>
